@@ -22,43 +22,12 @@
         .btn { display: inline-block; padding: 12px 25px; background: var(--principal); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; cursor: pointer; border: none; }
         .btn:hover { background: #800000; transform: scale(1.05); }
 
-      <section id="integrantes" style="padding: 60px 20px; max-width: 1000px; margin: auto; background: white; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <h2 style="color: #b30000; border-bottom: 2px solid #b30000; padding-bottom: 10px; text-align: center;">Los Integrantes</h2>
-    
-    <div class="grid-musicos" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px;">
-        
-        <div class="card" style="background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; text-align: center; transition: 0.3s;">
-            <img src="foto1.jpg" alt="Abel Villarreal - Acordeón y Voz de Chama.me" style="width: 100%; height: 320px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="margin: 10px 0 5px; color: #b30000; font-size: 1.4rem;">Abel Villarreal</h3>
-            <p style="font-size: 0.95rem; line-height: 1.5; color: #555;">Acordeonista màs de 25 años recorriendo el país, desde Santiago del Estero hasta Río Gallegos. Hoy, su acordeón traza las nuevas líneas del chamamé mundial.</p>
-        </div>
-
-        <div class="card" style="background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; text-align: center; transition: 0.3s;">
-            <img src="foto2.jpg" alt="Walter Villarreal - Guitarra de Chama.me" style="width: 100%; height: 320px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="margin: 10px 0 5px; color: #b30000; font-size: 1.4rem;">Walter Villarreal</h3>
-            <p style="font-size: 0.95rem; line-height: 1.5; color: #555;">Guitarra. Su arranque épico en el escenario Ernesto Montiel y el trofeo del Pre-Federal marcaron un camino de pura pasión. "El chamamé no es música, es un sentimiento".</p>
-        </div>
-
-        <div class="card" style="background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; text-align: center; transition: 0.3s;">
-            <img src="foto3.jpg" alt="Román Villarreal - Bajo y Voz de Chama.me" style="width: 100%; height: 320px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="margin: 10px 0 5px; color: #b30000; font-size: 1.4rem;">Román Villarreal</h3>
-            <p style="font-size: 0.95rem; line-height: 1.5; color: #555;">Voz y Bajo. Tocó para Raúl Barboza a los 8 años. Hoy lleva ese legado con orgullo en Chama.me, cantando y tocando lo que siente en cada encuentro con la gente.</p>
-        </div>
-
-        <div class="card" style="background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; text-align: center; transition: 0.3s;">
-            <img src="foto4.jpg" alt="Marcos Yulián Andreani - Percusión de Chama.me" style="width: 100%; height: 320px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="margin: 10px 0 5px; color: #b30000; font-size: 1.4rem;">Marcos Andreani</h3>
-            <p style="font-size: 0.95rem; line-height: 1.5; color: #555;">Percusión y Arreglos. Parte fundamental de la banda desde 2016. Esta innovación es un desafío que hace latir su corazón al ritmo del bombo y la nueva energía.</p>
-        </div>
-
-        <div class="card" style="background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; text-align: center; transition: 0.3s;">
-            <img src="foto5.jpg" alt="Andrés Cáceres - Percusión de Chama.me" style="width: 100%; height: 320px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="margin: 10px 0 5px; color: #b30000; font-size: 1.4rem;">Andrés Cáceres</h3>
-            <p style="font-size: 0.95rem; line-height: 1.5; color: #555;">Percusión. Cada escenario es una nueva oportunidad para conectar con el público y celebrar la aventura continua de nuestras raíces litoraleñas.</p>
-        </div>
-
-    </div>
-</section>
+        /* Integrantes */
+        .grid-musicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+        .card { background: #fff; padding: 15px; border: 1px solid #ddd; border-radius: 8px; text-align: center; }
+        .card img { width: 100%; height: 300px; object-fit: cover; border-radius: 5px; }
+        .card h3 { margin: 10px 0 5px; color: var(--principal); }
+        .card p { font-size: 0.9rem; font-style: italic; }
 
         /* Videos */
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 20px 0; }
