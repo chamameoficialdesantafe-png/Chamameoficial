@@ -47,7 +47,15 @@
         /* DISEÑO DE CONTENIDO */
         .section-title { font-size: 2rem; border-left: 5px solid var(--rojo); padding-left: 15px; margin-bottom: 30px; text-transform: uppercase; }
         
-        /* TARJETAS DE LA BANDA - OPTIMIZADAS PARA TEXTO LARGO */
+        /* VIDEOS ACTUALIZADOS */
+        .grid-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .video-box { background: var(--gris); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
+        .video-box:hover { border-color: var(--rojo); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 15px; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .video-box p { font-size: 0.9rem; line-height: 1.5; opacity: 0.9; text-align: left; margin: 0; }
+
+        /* TARJETAS DE LA BANDA */
         .grid-musicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { background: var(--gris); border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); height: 100%; }
         .card:hover { border-color: var(--rojo); transform: translateY(-5px); }
@@ -57,13 +65,7 @@
         .card .instrumento { font-weight: 700; color: #aaa; display: block; margin-bottom: 15px; font-size: 0.9rem; letter-spacing: 1px; }
         .card p { font-size: 0.95rem; line-height: 1.6; opacity: 0.9; margin: 0; text-align: justify; }
 
-        /* VIDEOS */
-        .grid-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .video-box { background: var(--gris); padding: 15px; border-radius: 15px; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-        /* REDES SOCIALES (SIN CAMBIOS EN BOTONES) */
+        /* REDES SOCIALES */
         .social-bar { display: flex; justify-content: center; gap: 15px; padding: 30px 0; }
         .social-btn { 
             width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; 
@@ -119,15 +121,19 @@
         <div class="grid-videos">
             <div class="video-box">
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/5i27TjA7aAA"></iframe></div>
-                <p>Nuestro Gran Amor - Obra principal.</p>
+                <p>Nuestro primer sencillo es una declaración de amor a la música, a la tierra y a la vida. Disponible en todas las plataformas de streaming.</p>
             </div>
             <div class="video-box">
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9_6ya7ITR70"></iframe></div>
-                <p>Mario Pereyra junto a Chama.me.</p>
+                <p>Amor tuerca interpretado por el legendario de la cumbia santafesina, "EL MÁSTER" Mario Pereyra. Una fusión que honra la tradición mientras abraza la innovación musical junto a chama.me.</p>
+            </div>
+            <div class="video-box">
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GoG1xDVIjsY"></iframe></div>
+                <p>Canta Gallito, canción de uno de los cantores más amados de nuestra música argentina. Una colaboración que celebra el legado del cantor del pueblo, Horacio Guarany, en un entorno rural que respira tradición.</p>
             </div>
             <div class="video-box">
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IAJYQv_rPQ0"></iframe></div>
-                <p>Sesión con Angel Pereyra.</p>
+                <p>Hay momentos en la música que no se explican, se sienten. En este encuentro especial, Ángel Pereyra, padre del legendario Luciano Pereyra, nos regala su voz en un chamamé lleno de emoción y autenticidad. Su interpretación de "El Conseguidor" es un testimonio vivo de la tradición chamamecera.</p>
             </div>
         </div>
     </section>
@@ -139,16 +145,16 @@
                 <img src="foto3.jpg" alt="Abel Villarreal">
                 <div class="card-info">
                     <h3>Abel Villarreal</h3>
-                    <span class="instrumento">Acordeón</span>
-                    <p>Hace más de 25 años nació todo con mi viejo Hugo y mi vieja de sostén Ester. Recorrimos gran parte de nuestro país: Santiago del Estero, Entre Ríos, Buenos Aires, Córdoba, Misiones, Río Gallegos, entre otros. Hoy Chama.me está trazando nuevas líneas para el mundo, más fuertes y felices que nunca. Mi acordeón siempre está preparada para que salga un chamamé.</p>
+                    <span class="instrumento">Acordeón y Dirección</span>
+                    <p>Hace más de 25 años nació todo con mi viejo Hugo y mi vieja de sostén Ester. Recorrimos gran parte de nuestro país. Hoy Chama.me está trazando nuevas líneas para el mundo, más fuertes y felices que nunca. Mi acordeón siempre está preparada para que salga un chamamé.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="foto1.jpg" alt="Walter Villarreal">
                 <div class="card-info">
                     <h3>Walter Villarreal</h3>
-                    <span class="instrumento"> Voz y Guitarra</span>
-                    <p>Mi arranque fue épico: escenario Ernesto Montiel, el muestrario de Entre Ríos, Festival Nacional del Chamamé, junto a mis hermanos. Con mi guitarra levantamos ese trofeo, fue como la Copa del Mundo para Messi. Desde entonces aprendí muchas cosas, recorrí muchos caminos. El chamamé no es música, es un sentimiento. Por eso nos animamos a hacer esta innovación porque respiramos chamamé y sabemos lo que hacemos.</p>
+                    <span class="instrumento">Voz y Guitarra</span>
+                    <p>Mi arranque fue escenario Ernesto Montiel, Festival Nacional del Chamamé. Con mi guitarra levantamos ese trofeo, fue como la Copa del Mundo para Messi. El chamamé no es música, es un sentimiento. Respiramos chamamé y sabemos lo que hacemos.</p>
                 </div>
             </div>
             <div class="card">
@@ -156,7 +162,7 @@
                 <div class="card-info">
                     <h3>Román Villarreal</h3>
                     <span class="instrumento">Voz y Bajo</span>
-                    <p>Tenía 8 años cuando ni noción tenía, estaba tocando el acordeón delante de Raúl Barboza en un teatro de Federal. Hoy tomo conciencia de ese momento y digo: gracias maestro por esa oportunidad, no lo voy a defraudar. Voy a llevar el chamamé en la frente como usted. Después de tantos años sigo en esta formación Chama.me. Canto y toco el bajo, trato de decir lo que siento en cada encuentro con la gente.</p>
+                    <p>Tenía 8 años cuando estaba tocando el acordeón delante de Raúl Barboza. Hoy tomo conciencia de ese momento. Gracias maestro por esa oportunidad. Voy a llevar el chamamé en la frente como usted. Canto y toco el bajo, trato de decir lo que siento.</p>
                 </div>
             </div>
             <div class="card">
@@ -164,7 +170,7 @@
                 <div class="card-info">
                     <h3>Marcos Yulián Andreani</h3>
                     <span class="instrumento">Percusión</span>
-                    <p>Estoy muy feliz de ser parte de esta banda. Mi desempeño con ellos es la percusión y arreglos musicales. En 2016 arrancamos con toda la fuerza a llevar la música por todos lados. Hoy, con esta innovación del chamamé, es todo un desafío, pero siento que cuando lo toco, mi corazón late al sonar del bombo. Es algo inexplicable, solo se siente.</p>
+                    <p>Mi desempeño es la percusión y arreglos musicales. Con esta innovación del chamamé es todo un desafío, pero siento que cuando lo toco, mi corazón late al sonar del bombo. Es algo inexplicable, solo se siente.</p>
                 </div>
             </div>
             <div class="card">
@@ -172,7 +178,7 @@
                 <div class="card-info">
                     <h3>Andrés Cáceres</h3>
                     <span class="instrumento">Percusión</span>
-                    <p>Cada momento en el escenario es una oportunidad de conectar con el público y compartir la pasión por el chamamé. Nuestro viaje musical es una aventura continua de crecimiento, aprendizaje y celebración de nuestras raíces argentinas.</p>
+                    <p>Cada momento en el escenario es una oportunidad de compartir la pasión por el chamamé. Nuestro viaje musical es una aventura continua de crecimiento, aprendizaje y celebración de nuestras raíces argentinas.</p>
                 </div>
             </div>
         </div>
