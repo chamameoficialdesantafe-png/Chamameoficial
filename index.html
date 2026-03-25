@@ -16,12 +16,15 @@
         /* HERO - ENCABEZADO MODERNO */
         header { 
             height: 90vh; 
-            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%), url(encabezado.jpg) no-repeat center center/cover;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%), url('encabezado.jpg') no-repeat center center/cover;
             display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 40px 20px; text-align: center;
         }
         .hero-text { margin-top: 20px; }
         header h1 { font-size: clamp(3rem, 10vw, 6rem); margin: 0; letter-spacing: -2px; font-weight: 900; text-transform: uppercase; color: var(--rojo); }
         header p { font-size: 1.2rem; max-width: 600px; font-weight: 400; opacity: 0.9; margin-bottom: 20px; }
+
+        /* Ajuste específico para bajar el botón al pecho */
+        .btn-container { margin-top: 150px; } 
 
         /* SECCIONES ESTILIZADAS */
         section { padding: 80px 5%; max-width: 1200px; margin: auto; }
@@ -83,7 +86,9 @@
     <div class="hero-text">
         <h1>Chama.me</h1>
         <p>La evolución del chamamé desde la provincia de Santa Fe.</p>
-        <a href="#galeria-videos" class="btn-header">Ver Videos</a>
+        <div class="btn-container">
+            <a href="#galeria-videos" class="btn-header">Ver Videos</a>
+        </div>
     </div>
     <a href="#sobre-nosotros" class="social-btn" style="border:none; animation: bounce 2s infinite;"><i class="fas fa-chevron-down"></i></a>
 </header>
@@ -102,7 +107,7 @@
 <section id="musica">
     <h2 class="section-title">Nuestro Gran Amor</h2>
     <div class="video-box" style="max-width: 800px; margin: auto;">
-        <p style="margin-bottom: 20px; font-style: italic; border-left: 3px solid var(--rojo); padding-left: 15px;">"Nació bajo una luz misteriosa en Sierra de los Padres, marcando el camino que teniamos que seguir."</p>
+        <p style="margin-bottom: 20px; font-style: italic; border-left: 3px solid var(--rojo); padding-left: 15px;">"Nació bajo una luz misteriosa en Sierra de los Padres, marcando el camino de la guaná porá."</p>
         <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/5i27TjA7aAA" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -136,9 +141,9 @@
 <section id="integrantes">
     <h2 class="section-title">La Banda</h2>
     <div class="grid-musicos">
-        <div class="card"><img src="foto3.jpg"> <div class="card-info"><h3>Abel Villarreal</h3><p>Acordeonista de la banda , 25 años de trayectoria nacional.</p></div></div>
-        <div class="card"><img src="foto1.jpg"> <div class="card-info"><h3>Walter Villarreal</h3><p>Guitarra. El sentimiento del chamamé en sus cuerdas.</p></div></div>
-        <div class="card"><img src="foto2.jpg"> <div class="card-info"><h3>Román Villarreal</h3><p>Voz y Bajo. Legado puro de Raúl Barboza.</p></div></div>
+        <div class="card"><img src="foto1.jpg"> <div class="card-info"><h3>Abel Villarreal</h3><p>Acordeón y Fundador. 25 años de trayectoria nacional.</p></div></div>
+        <div class="card"><img src="foto2.jpg"> <div class="card-info"><h3>Walter Villarreal</h3><p>Guitarra. El sentimiento del chamamé en sus cuerdas.</p></div></div>
+        <div class="card"><img src="foto3.jpg"> <div class="card-info"><h3>Román Villarreal</h3><p>Voz y Bajo. Legado puro de Raúl Barboza.</p></div></div>
         <div class="card"><img src="foto4.jpg"> <div class="card-info"><h3>Marcos Andreani</h3><p>Percusión. El pulso que hace latir la innovación.</p></div></div>
         <div class="card"><img src="foto5.jpg"> <div class="card-info"><h3>Andrés Cáceres</h3><p>Percusión. Energía y conexión total con el público.</p></div></div>
     </div>
