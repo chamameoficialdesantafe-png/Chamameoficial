@@ -44,7 +44,7 @@
         .btn-spotify-inline { background: #1DB954; color: white; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-left: 15px; }
         @media (max-width: 768px) { .player-item { flex-direction: column; border-radius: 20px; padding: 20px; } audio { width: 100%; margin: 10px 0; } .btn-spotify-inline { margin-left: 0; width: 100%; justify-content: center; } }
 
-        /* BOTONES SOCIALES (EFECTOS RESTAURADOS) */
+        /* BOTONES SOCIALES (RESTAURADOS) */
         .social-bar { display: flex; justify-content: center; gap: 15px; padding: 30px 0; }
         .social-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--gris); color: white; border: 1px solid var(--rojo); text-decoration: none; font-size: 1.4rem; }
         .social-btn:hover { transform: scale(1.2); border-color: transparent; color: white; }
@@ -52,7 +52,6 @@
         .yt:hover { background-color: #FF0000; box-shadow: 0 0 15px #FF0000; }
         .sp:hover { background-color: #1DB954; box-shadow: 0 0 15px #1DB954; }
 
-        /* FLOTANTE WHATSAPP */
         .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
 
         /* HISTORIA, VIDEOS Y BANDA */
@@ -94,7 +93,7 @@
             
             <div class="sobre-nosotros-inicio">
                 <h2>Sobre Nosotros</h2>
-                <p>Chama.me es un grupo musical dedicado a revitalizar el chamamé, fusionándolo con elementos contemporáneos que respetan sus raíces profundas.</p>
+                <p>Chama.me es un grupo musical dedicado a revitalizar el chamamé, fusionándolo con elementos contemporáneos.</p>
             </div>
 
             <div class="musica-footer">
@@ -108,7 +107,7 @@
                     <audio controls class="chamame-audio">
                         <source src="Nuestro Gran Amor.mp3" type="audio/mpeg">
                     </audio>
-                    <a href="#" class="btn-spotify-inline"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="https://open.spotify.com/artist/6tU1jD6VnK1O0M7HqB8pC0" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
@@ -117,9 +116,9 @@
                         <span class="track-name">Amor Tuerca</span>
                     </div>
                     <audio controls class="chamame-audio">
-                        <source src="Chama.mé ft Mario Pereyra - Amor Tuerca - (Videoclip Oficial) #chamame.mp3" type="audio/mpeg">
+                        <source src="Amor Tuerca .mp3" type="audio/mpeg">
                     </audio>
-                    <a href="#" class="btn-spotify-inline"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="https://open.spotify.com/artist/6tU1jD6VnK1O0M7HqB8pC0" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
@@ -130,21 +129,10 @@
                     <audio controls class="chamame-audio">
                         <source src="Canta Gallito.mp3" type="audio/mpeg">
                     </audio>
-                    <a href="#" class="btn-spotify-inline"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="https://open.spotify.com/artist/6tU1jD6VnK1O0M7HqB8pC0" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
-                <div class="player-item">
-                    <div class="player-info">
-                        <i class="fas fa-play-circle"></i>
-                        <span class="track-name">Acordeón Tuya Porá</span>
-                    </div>
-                    <audio controls class="chamame-audio">
-                        <source src="Acordeón Tuya Porá .mp3" type="audio/mpeg">
-                    </audio>
-                    <a href="#" class="btn-spotify-inline"><i class="fab fa-spotify"></i> Spotify</a>
-                </div>
-
-                <p style="font-size: 0.8rem; color: #666; margin-top: 15px;">Muestra de 40 segundos para la web.</p>
+                <p style="font-size: 0.8rem; color: #666; margin-top: 15px;">Muestra de 40 segundos. Disfruta los temas completos en Spotify.</p>
             </div>
         </div>
     </section>
@@ -155,7 +143,7 @@
             <div class="historia-grid">
                 <div>
                     <h3>El Inicio de un Sueño (Año 2000)</h3>
-                    <p>Todo comenzó en el año 2000, cuando Abel Villarreal y su padre, Hugo, decidieron emprender un camino musical...</p>
+                    <p>Todo comenzó en el año 2000, cuando Abel Villarreal y su padre, Hugo...</p>
                 </div>
                 <img src="abel en sus comiensos junto a chama.me chamameoficial.jpg" class="historia-img" alt="Inicios">
             </div>
@@ -167,9 +155,6 @@
         <div class="grid-videos">
             <div class="video-box">
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/5i27TjA7aAA"></iframe></div>
-            </div>
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9_6ya7ITR70"></iframe></div>
             </div>
         </div>
     </section>
@@ -190,7 +175,7 @@
     <div class="social-bar">
         <a href="https://facebook.com/chamameoficial" class="social-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://youtube.com/@chamameoficial" class="social-btn yt" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://spotify.com" class="social-btn sp" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://open.spotify.com/artist/6tU1jD6VnK1O0M7HqB8pC0" class="social-btn sp" target="_blank"><i class="fab fa-spotify"></i></a>
     </div>
 
     <a href="https://wa.me/543402529964" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -203,7 +188,6 @@
             window.scrollTo(0, 0);
         }
 
-        // Script para los 40 segundos
         const audios = document.querySelectorAll('.chamame-audio');
         audios.forEach(audio => {
             audio.ontimeupdate = function() {
