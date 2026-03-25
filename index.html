@@ -4,185 +4,105 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="HtqLtK_p13qlDlMYMOdSMfPWKw-EAVu4xEIUeltlKe4" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chama.me | El Nuevo Chamamé</title>
+    <title>Chama.me | El Nuevo Chamamé de Santa Fe</title>
+    <meta name="description" content="Sitio oficial de Abel Villarreal y Chama.me. La evolución del chamamé santafesino.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=MedievalSharp&display=swap" rel="stylesheet">
     
     <style>
         :root { --rojo: #e60000; --oscuro: #0f0f0f; --gris: #1e1e1e; --texto: #ffffff; }
         * { box-sizing: border-box; transition: all 0.3s ease; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--oscuro); color: var(--texto); scroll-behavior: smooth; padding-top: 70px; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--oscuro); color: var(--texto); padding-top: 70px; overflow-x: hidden; }
 
-        /* MENÚ DE NAVEGACIÓN */
-        nav {
-            background: rgba(15, 15, 15, 0.95);
-            height: 70px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5%;
-            border-bottom: 2px solid var(--rojo);
-        }
+        /* NAVEGACIÓN */
+        nav { background: rgba(15, 15, 15, 0.98); height: 70px; width: 100%; position: fixed; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; border-bottom: 2px solid var(--rojo); }
         .logo { font-weight: 900; font-size: 1.5rem; color: var(--rojo); text-decoration: none; text-transform: uppercase; }
-        .nav-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
-        .nav-links a { 
-            text-decoration: none; 
-            color: white; 
-            font-weight: 700; 
-            font-size: 0.9rem; 
-            text-transform: uppercase;
-        }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { text-decoration: none; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; cursor: pointer; }
         .nav-links a:hover { color: var(--rojo); }
 
-        @media (max-width: 768px) {
-            .nav-links { gap: 10px; }
-            .nav-links a { font-size: 0.7rem; }
-        }
+        /* OCULTAR SECCIONES POR DEFECTO */
+        section { display: none; padding: 40px 5%; max-width: 1200px; margin: auto; min-height: 80vh; }
+        section.active { display: block; animation: fadeIn 0.5s ease-in; }
 
-        /* HERO - ENCABEZADO */
-        header { 
-            height: 60vh; /* Se reduce la altura del encabezado */
-            background: url('encabezado.jpg') no-repeat center center/cover;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* Sección de título y subtítulo debajo de la foto */
-        .hero-info {
-            background-color: var(--oscuro);
-            padding: 40px 20px;
-            text-align: center;
-        }
+        /* ENCABEZADO FIJO PARA INICIO */
+        .hero-header { height: 50vh; background: url('encabezado.jpg') no-repeat center center/cover; width: 100%; }
+        .hero-info { padding: 40px 20px; text-align: center; }
         .hero-info h1 { 
-            font-family: 'MedievalSharp', cursive; /* Fuente mística */
-            font-size: clamp(3rem, 10vw, 6rem); 
-            margin: 0; 
-            letter-spacing: -2px; 
-            font-weight: 900; 
-            text-transform: uppercase; 
-            /* Diseño de letra místico: color y sombra */
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 10px rgba(255, 65, 108, 0.7));
-        }
-        .hero-info p { 
-            font-size: 1.2rem; 
-            max-width: 600px; 
-            font-weight: 400; 
-            opacity: 0.9; 
-            margin: 20px auto 0;
+            font-family: 'MedievalSharp', cursive; font-size: clamp(3rem, 10vw, 5rem); margin: 0; 
+            background: linear-gradient(45deg, #ff416c, #ff4b2b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(255, 65, 108, 0.5));
         }
 
-        /* SECCIONES ESTILIZADAS */
-        section { padding: 80px 5%; max-width: 1200px; margin: auto; }
-        .section-title { font-size: 2.5rem; border-left: 5px solid var(--rojo); padding-left: 15px; margin-bottom: 40px; text-transform: uppercase; }
-
-        /* SOBRE NOSOTROS & HISTORIA */
-        .about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .about-img { width: 100%; border-radius: 15px; filter: grayscale(30%); }
-        .about-img:hover { filter: grayscale(0%); transform: scale(1.02); }
-        @media (max-width: 768px) { .about-container { grid-template-columns: 1fr; } }
-
-        /* TARJETAS DE INTEGRANTES */
-        .grid-musicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: var(--gris); border-radius: 20px; overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.1); }
-        .card:hover { transform: translateY(-10px); border-color: var(--rojo); }
-        .card img { width: 100%; height: 400px; object-fit: cover; }
-        .card-info { padding: 20px; background: linear-gradient(transparent, #000); position: absolute; bottom: 0; width: 100%; }
-        .card h3 { color: var(--rojo); margin: 0; font-size: 1.5rem; }
-        .card p { font-size: 0.85rem; margin-top: 10px; line-height: 1.4; opacity: 0.8; }
-
-        /* VIDEOS Y MULTIMEDIA */
-        .grid-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .video-box { background: var(--gris); padding: 20px; border-radius: 20px; margin-bottom: 20px; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; }
+        /* DISEÑO DE CONTENIDO */
+        .section-title { font-size: 2rem; border-left: 5px solid var(--rojo); padding-left: 15px; margin-bottom: 30px; text-transform: uppercase; }
+        .grid-musicos, .grid-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: var(--gris); border-radius: 15px; overflow: hidden; position: relative; }
+        .card img { width: 100%; height: 350px; object-fit: cover; }
+        .card-info { padding: 15px; background: linear-gradient(transparent, #000); position: absolute; bottom: 0; width: 100%; }
+        
+        .video-box { background: var(--gris); padding: 15px; border-radius: 15px; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .video-desc { font-size: 0.9rem; margin-top: 15px; color: #ccc; line-height: 1.5; }
 
-        /* BOTONES */
-        .btn-header { background: var(--rojo); color:white; border:none; padding: 15px 35px; border-radius: 30px; cursor:pointer; font-weight:bold; text-transform:uppercase; text-decoration: none; display: inline-block; }
-        .btn-header:hover { transform: scale(1.1); background: #ff1a1a; }
+        .btn-header { background: var(--rojo); color:white; border:none; padding: 12px 30px; border-radius: 25px; cursor:pointer; font-weight:bold; text-transform:uppercase; margin-top: 15px; }
 
-        /* REDES SOCIALES FLOTANTES */
-        .social-bar { display: flex; justify-content: center; gap: 20px; padding: 40px 0; }
-        .social-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--gris); color: white; text-decoration: none; font-size: 1.5rem; border: 1px solid var(--rojo); }
-        .social-btn:hover { background: var(--rojo); color: white; box-shadow: 0 0 20px var(--rojo); }
-
-        /* WHATSAPP */
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; color: white; z-index: 100; box-shadow: 0 5px 15px rgba(0,0,0,0.3); text-decoration: none; }
-
-        /* MODAL DE HISTORIA */
-        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; padding: 20px; overflow-y: auto; }
-        .modal-body { max-width: 800px; margin: 40px auto; background: var(--gris); padding: 40px; border-radius: 20px; border: 1px solid var(--rojo); position: relative;}
-        .close-modal { position: absolute; top: 20px; right: 20px; font-size: 2rem; cursor: pointer; color: var(--rojo); }
+        .social-bar { display: flex; justify-content: center; gap: 15px; padding: 30px 0; }
+        .social-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--gris); color: white; border: 1px solid var(--rojo); text-decoration: none; }
+        
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 1000; }
     </style>
 </head>
-<body id="inicio">
+<body>
 
     <nav>
-        <a href="#inicio" class="logo">Chama.me</a>
+        <a onclick="showSection('inicio')" class="logo">Chama.me</a>
         <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-nosotros">Nuestra Historia</a></li> <li><a href="#galeria-videos">Videos</a></li>
-            <li><a href="#integrantes">La Banda</a></li>
-            <li><a href="https://wa.me/543402529964" target="_blank" style="color: #25d366;"><i class="fab fa-whatsapp"></i> Contacto</a></li>
+            <li><a onclick="showSection('inicio')">Inicio</a></li>
+            <li><a onclick="showSection('sobre-nosotros')">Historia</a></li>
+            <li><a onclick="showSection('galeria-videos')">Videos</a></li>
+            <li><a onclick="showSection('integrantes')">La Banda</a></li>
+            <li><a href="https://wa.me/543402529964" target="_blank" style="color: #25d366;">Contacto</a></li>
         </ul>
     </nav>
 
-    <header>
-    </header>
-
-    <div class="hero-info">
-        <h1>Chama.me</h1>
-        <p>La evolución del chamamé desde la provincia de Santa Fe.</p>
-        </div>
-
-    <section id="sobre-nosotros">
-        <h2 class="section-title">Nuestra Historia</h2>
-        <div class="about-container">
-            <img src="Grupo chama.me.jpg" class="about-img" alt="Grupo Chama.me">
-            <div>
-                <p style="font-size: 1.2rem;">Innovamos el chamamé, fusionando la raíz litoraleña con la energía contemporánea de Santa Fe.</p>
-                <button class="btn-header" onclick="document.getElementById('historia').style.display='block'">Ver Historia Completa</button>
-            </div>
+    <section id="inicio" class="active">
+        <div class="hero-header"></div>
+        <div class="hero-info">
+            <h1>Chama.me</h1>
+            <p>La evolución del chamamé desde la provincia de Santa Fe.</p>
+            <p style="margin-top: 40px; font-style: italic; color: var(--rojo);">"Nació bajo una luz misteriosa en Sierra de los Padres..."</p>
         </div>
     </section>
 
-    <section id="musica">
-        <h2 class="section-title">Nuestro Gran Amor</h2>
-        <div class="video-box" style="max-width: 800px; margin: auto;">
-            <p style="margin-bottom: 20px; font-style: italic; border-left: 3px solid var(--rojo); padding-left: 15px;">"Nació bajo una luz misteriosa en Sierra de los Padres, marcando el camino de la guaná porá."</p>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/5i27TjA7aAA" frameborder="0" allowfullscreen></iframe>
+    <section id="sobre-nosotros">
+        <h2 class="section-title">Nuestra Historia</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: start;">
+            <img src="Grupo chama.me.jpg" style="width: 100%; border-radius: 15px;" alt="Chama.me Historia">
+            <div>
+                <p>Todo comenzó en el año 2000 con Abel y su padre Hugo Villarreal. Desde el Rancho de Ramón Merlo hasta ganar como Revelación en el Festival Nacional del Chamamé.</p>
+                <p>Tras la pandemia, evolucionamos hacia <strong>Chama.me</strong>, uniendo nuestra raíz santafesina con el nuevo sonido del litoral.</p>
+                <img src="0321-Cover.jpg" style="width:100%; margin-top:20px; border-radius:10px;">
             </div>
         </div>
     </section>
 
     <section id="galeria-videos">
-        <h2 class="section-title">Más Videos</h2>
+        <h2 class="section-title">Videos Oficiales</h2>
         <div class="grid-videos">
             <div class="video-box">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/9_6ya7ITR70" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p class="video-desc">Mario Pereyra "El Master" junto a Chama.me interpretando "Amor Tuerca".</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/5i27TjA7aAA"></iframe></div>
+                <p>Nuestro Gran Amor - Obra principal.</p>
             </div>
             <div class="video-box">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/GoG1xDVIjsY" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p class="video-desc">Chama.me interpretando "Canta Gallito".</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9_6ya7ITR70"></iframe></div>
+                <p>Mario Pereyra junto a Chama.me.</p>
             </div>
             <div class="video-box">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/IAJYQv_rPQ0" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p class="video-desc">Sesión musical con Angel Pereyra, una jornada inolvidable de música.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IAJYQv_rPQ0"></iframe></div>
+                <p>Sesión con Angel Pereyra.</p>
             </div>
         </div>
     </section>
@@ -190,31 +110,36 @@
     <section id="integrantes">
         <h2 class="section-title">La Banda</h2>
         <div class="grid-musicos">
-            <div class="card"><img src="foto3.jpg" alt="Abel Villarreal - Acordeonista"> <div class="card-info"><h3>Abel Villarreal</h3><p>Acordeonista, 25 años de trayectoria nacional.</p></div></div>
-            <div class="card"><img src="foto1.jpg" alt="Walter Villarreal - Guitarrista"> <div class="card-info"><h3>Walter Villarreal</h3><p>Guitarra. El sentimiento del chamamé en sus cuerdas.</p></div></div>
-            <div class="card"><img src="foto2.jpg" alt="Román Villarreal - Bajo"> <div class="card-info"><h3>Román Villarreal</h3><p>Voz y Bajo. Legado puro de Raúl Barboza.</p></div></div>
-            <div class="card"><img src="foto4.jpg" alt="Marcos Andreani - Percusión"> <div class="card-info"><h3>Marcos Andreani</h3><p>Percusión. El pulso que hace latir la innovación.</p></div></div>
-            <div class="card"><img src="foto5.jpg" alt="Andrés Cáceres - Percusión"> <div class="card-info"><h3>Andrés Cáceres</h3><p>Percusión. Energía y conexión total con el público.</p></div></div>
+            <div class="card"><img src="foto3.jpg" alt="Abel Villarreal - Acordeonista Chamamé"> <div class="card-info"><h3>Abel Villarreal</h3><p>Acordeonista y Líder.</p></div></div>
+            <div class="card"><img src="foto1.jpg" alt="Walter Villarreal - Guitarrista"> <div class="card-info"><h3>Walter Villarreal</h3><p>Guitarra.</p></div></div>
+            <div class="card"><img src="foto2.jpg" alt="Román Villarreal - Bajo"> <div class="card-info"><h3>Román Villarreal</h3><p>Voz y Bajo.</p></div></div>
+            <div class="card"><img src="foto4.jpg" alt="Marcos Andreani - Percusión"> <div class="card-info"><h3>Marcos Andreani</h3><p>Percusión.</p></div></div>
+            <div class="card"><img src="foto5.jpg" alt="Andrés Cáceres - Percusión"> <div class="card-info"><h3>Andrés Cáceres</h3><p>Percusión.</p></div></div>
         </div>
     </section>
 
     <div class="social-bar">
-        <a href="https://www.facebook.com/chamameoficial" class="social-btn" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.youtube.com/@chamameoficial" class="social-btn" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://open.spotify.com/intl-es/artist/4dcifyrgMbgBId8ZUylxqM" class="social-btn" target="_blank"><i class="fab fa-spotify"></i></a>
-    </div>
-
-    <div id="historia" class="modal">
-        <div class="modal-body">
-            <span class="close-modal" onclick="document.getElementById('historia').style.display='none'">×</span>
-            <h2 style="color: var(--rojo);">De la Raíz a la Nueva Sonoridad</h2>
-            <p>Todo comenzó en el año 2000 con Abel y su padre Hugo Villarreal. Desde el Rancho de Ramón Merlo hasta ganar como Revelación en el Festival Nacional del Chamamé.</p>
-            <p>Hoy, tras la reflexión de la pandemia, evolucionamos hacia <strong>Chama.me</strong>, uniendo nuestra raíz santafesina con el respeto total por el acordeón y la guitarra tradicional.</p>
-            <img src="0321-Cover.jpg" style="width:100%; margin-top:20px; border-radius:10px;">
-        </div>
+        <a href="https://facebook.com/chamameoficial" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://youtube.com/@chamameoficial" class="social-btn"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-spotify"></i></a>
     </div>
 
     <a href="https://wa.me/543402529964" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            
+            // Mostrar la seleccionada
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+            
+            // Volver arriba de la página
+            window.scrollTo(0, 0);
+        }
+    </script>
 
 </body>
 </html>
