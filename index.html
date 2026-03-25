@@ -35,7 +35,7 @@
             background: url('encabezado.jpg') no-repeat center center/cover; 
             transition: transform 0.8s ease;
         }
-        .hero-container:hover .hero-header { transform: scale(1.1); } /* Efecto de agrandado */
+        .hero-container:hover .hero-header { transform: scale(1.1); }
 
         .hero-info { padding: 40px 20px; text-align: center; }
         .hero-info h1 { 
@@ -46,31 +46,36 @@
 
         /* DISEÑO DE CONTENIDO */
         .section-title { font-size: 2rem; border-left: 5px solid var(--rojo); padding-left: 15px; margin-bottom: 30px; text-transform: uppercase; }
-        .grid-musicos, .grid-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: var(--gris); border-radius: 15px; overflow: hidden; position: relative; }
-        .card img { width: 100%; height: 350px; object-fit: cover; }
-        .card-info { padding: 15px; background: linear-gradient(transparent, #000); position: absolute; bottom: 0; width: 100%; }
         
+        /* TARJETAS DE LA BANDA - OPTIMIZADAS PARA TEXTO LARGO */
+        .grid-musicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--gris); border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); height: 100%; }
+        .card:hover { border-color: var(--rojo); transform: translateY(-5px); }
+        .card img { width: 100%; height: 400px; object-fit: cover; border-bottom: 3px solid var(--rojo); }
+        .card-info { padding: 25px; }
+        .card h3 { color: var(--rojo); margin: 0 0 10px 0; font-size: 1.6rem; text-transform: uppercase; }
+        .card .instrumento { font-weight: 700; color: #aaa; display: block; margin-bottom: 15px; font-size: 0.9rem; letter-spacing: 1px; }
+        .card p { font-size: 0.95rem; line-height: 1.6; opacity: 0.9; margin: 0; text-align: justify; }
+
+        /* VIDEOS */
+        .grid-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
         .video-box { background: var(--gris); padding: 15px; border-radius: 15px; }
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-        /* REDES SOCIALES CON CAMBIO DE COLOR */
+        /* REDES SOCIALES (SIN CAMBIOS EN BOTONES) */
         .social-bar { display: flex; justify-content: center; gap: 15px; padding: 30px 0; }
         .social-btn { 
             width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; 
             justify-content: center; background: var(--gris); color: white; border: 1px solid var(--rojo); 
             text-decoration: none; font-size: 1.4rem;
         }
-        
-        /* Efectos individuales por red social */
         .social-btn:hover { transform: scale(1.2); border-color: transparent; color: white; }
         .fb:hover { background-color: #1877F2; box-shadow: 0 0 15px #1877F2; }
         .yt:hover { background-color: #FF0000; box-shadow: 0 0 15px #FF0000; }
         .sp:hover { background-color: #1DB954; box-shadow: 0 0 15px #1DB954; }
 
         .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .wa-float:hover { transform: scale(1.1); background: #20ba5a; }
     </style>
 </head>
 <body>
@@ -130,11 +135,46 @@
     <section id="integrantes">
         <h2 class="section-title">La Banda</h2>
         <div class="grid-musicos">
-            <div class="card"><img src="foto3.jpg" alt="Abel Villarreal - Acordeonista Chamamé"> <div class="card-info"><h3>Abel Villarreal</h3><p>Acordeonista y Líder.</p></div></div>
-            <div class="card"><img src="foto1.jpg" alt="Walter Villarreal - Guitarrista"> <div class="card-info"><h3>Walter Villarreal</h3><p>Guitarra.</p></div></div>
-            <div class="card"><img src="foto2.jpg" alt="Román Villarreal - Bajo"> <div class="card-info"><h3>Román Villarreal</h3><p>Voz y Bajo.</p></div></div>
-            <div class="card"><img src="foto4.jpg" alt="Marcos Andreani - Percusión"> <div class="card-info"><h3>Marcos Andreani</h3><p>Percusión.</p></div></div>
-            <div class="card"><img src="foto5.jpg" alt="Andrés Cáceres - Percusión"> <div class="card-info"><h3>Andrés Cáceres</h3><p>Percusión.</p></div></div>
+            <div class="card">
+                <img src="foto3.jpg" alt="Abel Villarreal">
+                <div class="card-info">
+                    <h3>Abel Villarreal</h3>
+                    <span class="instrumento">Acordeón y Dirección</span>
+                    <p>Hace más de 25 años nació todo con mi viejo Hugo y mi vieja de sostén Ester. Recorrimos gran parte de nuestro país: Santiago del Estero, Entre Ríos, Buenos Aires, Córdoba, Misiones, Río Gallegos, entre otros. Hoy Chama.me está trazando nuevas líneas para el mundo, más fuertes y felices que nunca. Mi acordeón siempre está preparada para que salga un chamamé.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="foto1.jpg" alt="Walter Villarreal">
+                <div class="card-info">
+                    <h3>Walter Villarreal</h3>
+                    <span class="instrumento">Guitarra</span>
+                    <p>Mi arranque fue épico: escenario Ernesto Montiel, el muestrario de Entre Ríos, Festival Nacional del Chamamé, junto a mis hermanos. Con mi guitarra levantamos ese trofeo, fue como la Copa del Mundo para Messi. Desde entonces aprendí muchas cosas, recorrí muchos caminos. El chamamé no es música, es un sentimiento. Por eso nos animamos a hacer esta innovación porque respiramos chamamé y sabemos lo que hacemos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="foto2.jpg" alt="Román Villarreal">
+                <div class="card-info">
+                    <h3>Román Villarreal</h3>
+                    <span class="instrumento">Voz y Bajo</span>
+                    <p>Tenía 8 años cuando ni noción tenía, estaba tocando el acordeón delante de Raúl Barboza en un teatro de Federal. Hoy tomo conciencia de ese momento y digo: gracias maestro por esa oportunidad, no lo voy a defraudar. Voy a llevar el chamamé en la frente como usted. Después de tantos años sigo en esta formación Chama.me. Canto y toco el bajo, trato de decir lo que siento en cada encuentro con la gente.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="foto4.jpg" alt="Marcos Andreani">
+                <div class="card-info">
+                    <h3>Marcos Yulián Andreani</h3>
+                    <span class="instrumento">Percusión y Arreglos</span>
+                    <p>Estoy muy feliz de ser parte de esta banda. Mi desempeño con ellos es la percusión y arreglos musicales. En 2016 arrancamos con toda la fuerza a llevar la música por todos lados. Hoy, con esta innovación del chamamé, es todo un desafío, pero siento que cuando lo toco, mi corazón late al sonar del bombo. Es algo inexplicable, solo se siente.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="foto5.jpg" alt="Andrés Cáceres">
+                <div class="card-info">
+                    <h3>Andrés Cáceres</h3>
+                    <span class="instrumento">Percusión</span>
+                    <p>Cada momento en el escenario es una oportunidad de conectar con el público y compartir la pasión por el chamamé. Nuestro viaje musical es una aventura continua de crecimiento, aprendizaje y celebración de nuestras raíces argentinas.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -150,10 +190,8 @@
         function showSection(sectionId) {
             const sections = document.querySelectorAll('section');
             sections.forEach(sec => sec.classList.remove('active'));
-            
             const activeSection = document.getElementById(sectionId);
             activeSection.classList.add('active');
-            
             window.scrollTo(0, 0);
         }
     </script>
