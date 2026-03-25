@@ -94,4 +94,127 @@
         .card:hover { transform: translateY(-10px); border-color: var(--rojo); }
         .card img { width: 100%; height: 400px; object-fit: cover; }
         .card-info { padding: 20px; background: linear-gradient(transparent, #000); position: absolute; bottom: 0; width: 100%; }
-        .card
+        .card h3 { color: var(--rojo); margin: 0; font-size: 1.5rem; }
+        .card p { font-size: 0.85rem; margin-top: 10px; line-height: 1.4; opacity: 0.8; }
+
+        /* VIDEOS Y MULTIMEDIA */
+        .grid-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .video-box { background: var(--gris); padding: 20px; border-radius: 20px; margin-bottom: 20px; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .video-desc { font-size: 0.9rem; margin-top: 15px; color: #ccc; line-height: 1.5; }
+
+        /* BOTONES */
+        .btn-header { background: var(--rojo); color:white; border:none; padding: 15px 35px; border-radius: 30px; cursor:pointer; font-weight:bold; text-transform:uppercase; text-decoration: none; display: inline-block; }
+        .btn-header:hover { transform: scale(1.1); background: #ff1a1a; }
+
+        /* REDES SOCIALES FLOTANTES */
+        .social-bar { display: flex; justify-content: center; gap: 20px; padding: 40px 0; }
+        .social-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--gris); color: white; text-decoration: none; font-size: 1.5rem; border: 1px solid var(--rojo); }
+        .social-btn:hover { background: var(--rojo); color: white; box-shadow: 0 0 20px var(--rojo); }
+
+        /* WHATSAPP */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; color: white; z-index: 100; box-shadow: 0 5px 15px rgba(0,0,0,0.3); text-decoration: none; }
+
+        /* MODAL DE HISTORIA */
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; padding: 20px; overflow-y: auto; }
+        .modal-body { max-width: 800px; margin: 40px auto; background: var(--gris); padding: 40px; border-radius: 20px; border: 1px solid var(--rojo); position: relative;}
+        .close-modal { position: absolute; top: 20px; right: 20px; font-size: 2rem; cursor: pointer; color: var(--rojo); }
+    </style>
+</head>
+<body id="inicio">
+
+    <nav>
+        <a href="#inicio" class="logo">Chama.me</a>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-nosotros">Nuestra Historia</a></li> <li><a href="#galeria-videos">Videos</a></li>
+            <li><a href="#integrantes">La Banda</a></li>
+            <li><a href="https://wa.me/543402529964" target="_blank" style="color: #25d366;"><i class="fab fa-whatsapp"></i> Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header>
+    </header>
+
+    <div class="hero-info">
+        <h1>Chama.me</h1>
+        <p>La evolución del chamamé desde la provincia de Santa Fe.</p>
+        </div>
+
+    <section id="sobre-nosotros">
+        <h2 class="section-title">Nuestra Historia</h2>
+        <div class="about-container">
+            <img src="Grupo chama.me.jpg" class="about-img" alt="Grupo Chama.me">
+            <div>
+                <p style="font-size: 1.2rem;">Innovamos el chamamé, fusionando la raíz litoraleña con la energía contemporánea de Santa Fe.</p>
+                <button class="btn-header" onclick="document.getElementById('historia').style.display='block'">Ver Historia Completa</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="musica">
+        <h2 class="section-title">Nuestro Gran Amor</h2>
+        <div class="video-box" style="max-width: 800px; margin: auto;">
+            <p style="margin-bottom: 20px; font-style: italic; border-left: 3px solid var(--rojo); padding-left: 15px;">"Nació bajo una luz misteriosa en Sierra de los Padres, marcando el camino de la guaná porá."</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/5i27TjA7aAA" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria-videos">
+        <h2 class="section-title">Más Videos</h2>
+        <div class="grid-videos">
+            <div class="video-box">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/9_6ya7ITR70" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="video-desc">Mario Pereyra "El Master" junto a Chama.me interpretando "Amor Tuerca".</p>
+            </div>
+            <div class="video-box">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/GoG1xDVIjsY" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="video-desc">Chama.me interpretando "Canta Gallito".</p>
+            </div>
+            <div class="video-box">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/IAJYQv_rPQ0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="video-desc">Sesión musical con Angel Pereyra, una jornada inolvidable de música.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="integrantes">
+        <h2 class="section-title">La Banda</h2>
+        <div class="grid-musicos">
+            <div class="card"><img src="foto3.jpg" alt="Abel Villarreal - Acordeonista"> <div class="card-info"><h3>Abel Villarreal</h3><p>Acordeonista, 25 años de trayectoria nacional.</p></div></div>
+            <div class="card"><img src="foto1.jpg" alt="Walter Villarreal - Guitarrista"> <div class="card-info"><h3>Walter Villarreal</h3><p>Guitarra. El sentimiento del chamamé en sus cuerdas.</p></div></div>
+            <div class="card"><img src="foto2.jpg" alt="Román Villarreal - Bajo"> <div class="card-info"><h3>Román Villarreal</h3><p>Voz y Bajo. Legado puro de Raúl Barboza.</p></div></div>
+            <div class="card"><img src="foto4.jpg" alt="Marcos Andreani - Percusión"> <div class="card-info"><h3>Marcos Andreani</h3><p>Percusión. El pulso que hace latir la innovación.</p></div></div>
+            <div class="card"><img src="foto5.jpg" alt="Andrés Cáceres - Percusión"> <div class="card-info"><h3>Andrés Cáceres</h3><p>Percusión. Energía y conexión total con el público.</p></div></div>
+        </div>
+    </section>
+
+    <div class="social-bar">
+        <a href="https://www.facebook.com/chamameoficial" class="social-btn" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@chamameoficial" class="social-btn" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com/intl-es/artist/4dcifyrgMbgBId8ZUylxqM" class="social-btn" target="_blank"><i class="fab fa-spotify"></i></a>
+    </div>
+
+    <div id="historia" class="modal">
+        <div class="modal-body">
+            <span class="close-modal" onclick="document.getElementById('historia').style.display='none'">×</span>
+            <h2 style="color: var(--rojo);">De la Raíz a la Nueva Sonoridad</h2>
+            <p>Todo comenzó en el año 2000 con Abel y su padre Hugo Villarreal. Desde el Rancho de Ramón Merlo hasta ganar como Revelación en el Festival Nacional del Chamamé.</p>
+            <p>Hoy, tras la reflexión de la pandemia, evolucionamos hacia <strong>Chama.me</strong>, uniendo nuestra raíz santafesina con el respeto total por el acordeón y la guitarra tradicional.</p>
+            <img src="0321-Cover.jpg" style="width:100%; margin-top:20px; border-radius:10px;">
+        </div>
+    </div>
+
+    <a href="https://wa.me/543402529964" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+</body>
+</html>
