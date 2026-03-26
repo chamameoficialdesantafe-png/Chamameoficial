@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -14,12 +14,62 @@
         * { box-sizing: border-box; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
         body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--oscuro); color: var(--texto); padding-top: 70px; overflow-x: hidden; }
 
-        /* NAVEGACIÓN */
-        nav { background: rgba(15, 15, 15, 0.98); height: 70px; width: 100%; position: fixed; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; border-bottom: 2px solid var(--rojo); }
-        .logo { font-weight: 900; font-size: 1.5rem; color: var(--rojo); text-decoration: none; text-transform: uppercase; cursor: pointer; }
-        .nav-links { display: flex; gap: 20px; list-style: none; }
-        .nav-links a { text-decoration: none; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; cursor: pointer; }
+        /* NAVEGACIÓN CORREGIDA PARA CENTRADO */
+        nav { 
+            background: rgba(15, 15, 15, 0.98); 
+            height: auto; 
+            min-height: 70px;
+            width: 100%; 
+            position: fixed; 
+            top: 0; 
+            z-index: 1000; 
+            display: flex; 
+            flex-direction: column; /* Apila logo y links en móvil */
+            justify-content: center; 
+            align-items: center; 
+            padding: 10px 0; 
+            border-bottom: 2px solid var(--rojo); 
+        }
+        
+        .logo { 
+            font-weight: 900; 
+            font-size: 1.5rem; 
+            color: var(--rojo); 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        .nav-links { 
+            display: flex; 
+            gap: 12px; 
+            list-style: none; 
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap; /* Permite que bajen si no entran */
+            justify-content: center; /* Centra los botones */
+        }
+
+        .nav-links a { 
+            text-decoration: none; 
+            color: white; 
+            font-weight: 700; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            cursor: pointer; 
+            padding: 5px 2px;
+        }
+        
         .nav-links a:hover { color: var(--rojo); }
+
+        /* Ajuste para pantallas grandes */
+        @media (min-width: 768px) {
+            nav { flex-direction: row; justify-content: space-between; padding: 0 5%; height: 70px; }
+            .logo { margin-bottom: 0; }
+            .nav-links { gap: 20px; }
+            .nav-links a { font-size: 0.8rem; }
+        }
 
         /* SECCIONES */
         section { display: none; padding: 40px 5%; max-width: 1200px; margin: auto; min-height: 80vh; }
@@ -41,7 +91,12 @@
         .track-name { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: white; }
         audio { height: 30px; filter: invert(100%) hue-rotate(180deg) brightness(1.5); }
         .btn-spotify-inline { background: #1DB954; color: white; text-decoration: none; padding: 6px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-left: 15px; }
-        @media (max-width: 768px) { .player-item { flex-direction: column; border-radius: 20px; padding: 15px; } audio { width: 100%; margin: 10px 0; } .btn-spotify-inline { margin-left: 0; width: 100%; justify-content: center; } }
+        
+        @media (max-width: 768px) { 
+            .player-item { flex-direction: column; border-radius: 20px; padding: 15px; } 
+            audio { width: 100%; margin: 10px 0; } 
+            .btn-spotify-inline { margin-left: 0; width: 100%; justify-content: center; } 
+        }
 
         /* SOBRE NOSOTROS INICIO */
         .sobre-nosotros-inicio { max-width: 800px; margin: 40px auto; text-align: center; line-height: 1.8; }
@@ -72,7 +127,7 @@
         .card p { font-size: 0.95rem; line-height: 1.6; text-align: justify; }
 
         /* BOTONES SOCIALES */
-        .social-bar { display: flex; justify(center); gap: 15px; padding: 30px 0; justify-content: center; }
+        .social-bar { display: flex; gap: 15px; padding: 30px 0; justify-content: center; }
         .social-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--gris); color: white; border: 1px solid var(--rojo); text-decoration: none; font-size: 1.4rem; }
         .social-btn:hover { transform: scale(1.2); border-color: transparent; color: white; }
         .fb:hover { background-color: #1877F2; box-shadow: 0 0 15px #1877F2; }
@@ -116,37 +171,37 @@
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Amor Tuerca</span></div>
                     <audio controls class="chamame-audio"><source src="Amor Tuerca .mp3" type="audio/mpeg"></audio>
-                    <a href="https://spotify.com" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="#" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Nuestro Gran Amor</span></div>
                     <audio controls class="chamame-audio"><source src="Nuestro Gran Amor.mp3" type="audio/mpeg"></audio>
-                    <a href="https://spotify.com" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="#" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Canta Gallito</span></div>
                     <audio controls class="chamame-audio"><source src="Canta Gallito.mp3" type="audio/mpeg"></audio>
-                    <a href="https://spotify.com" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="#" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">El Toro</span></div>
                     <audio controls class="chamame-audio"><source src="El Toro.mp3" type="audio/mpeg"></audio>
-                    <a href="https://spotify.com" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="#" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Acordeón Tuya Porá</span></div>
                     <audio controls class="chamame-audio"><source src="Acordeón Tuya Porá .mp3" type="audio/mpeg"></audio>
-                    <a href="https://spotify.com" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="#" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Aprenderas a llorar</span></div>
                     <audio controls class="chamame-audio"><source src="Aprenderas a llorar.mp3" type="audio/mpeg"></audio>
-                    <a href="https://spotify.com" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="#" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <p style="margin-top: 15px; font-size: 0.8rem; color: #666;">Muestras de audio para la web. Encuentra los temas completos en nuestras redes.</p>
@@ -160,31 +215,13 @@
         <h2 class="section-title">Nuestra Historia</h2>
         <div class="historia-content">
             <p style="font-size: 1.4rem; font-weight: 700; color: var(--rojo); text-align: center; margin-bottom: 40px;">De la Raíz a la Nueva Sonoridad</p>
-            
             <div class="historia-grid">
                 <div>
                     <h3>El Inicio de un Sueño (Año 2000)</h3>
-                    <p>Todo comenzó en el año 2000, cuando Abel Villarreal y su padre, Hugo, decidieron emprender un camino musical que marcaría sus vidas. Sus primeros pasos los llevaron al emblemático <strong>"Rancho de Ramón Merlo"</strong>, un lugar sagrado para nuestra música donde no solo forjaron amistades, sino que templaron el espíritu chamamecero.</p>
-                    <p>Ese mismo año, el destino los puso a prueba en el Pre-Federal. Con el debut de Walter (hermano de Abel) en el acordeón, lograron ganar su lugar para pisar por primera vez el legendario escenario Ernesto Montiel.</p>
+                    <p>Todo comenzó en el año 2000, cuando Abel Villarreal y su padre, Hugo, decidieron emprender un camino musical que marcaría sus vidas.</p>
                 </div>
                 <img src="abel en sus comiensos junto a chama.me chamameoficial.jpg" class="historia-img" alt="Inicios de Chama.me">
             </div>
-
-            <h3>La Consagración y los Grandes Escenarios</h3>
-            <p>Sin rendirse, al año siguiente regresaron con más fuerza y fueron galardonados como <strong>Revelación del Festival Nacional del Chamamé</strong>. Este hito fue la llave que abrió las puertas de los medios de comunicación y los llevó a recorrer los escenarios más prestigiosos del país.</p>
-
-            <div class="historia-grid" style="margin-top: 40px;">
-                <img src="Grupo chama.me.jpg" class="historia-img" alt="Evolución Chama.me">
-                <div>
-                    <h3>El Renacimiento: "CHAMA.ME"</h3>
-                    <p>La pandemia fue un punto de inflexión, un "colapso" que nos obligó a la reflexión profunda. En ese silencio, Abel y el grupo decidieron evolucionar.</p>
-                    <p>Como hijos de la provincia de Santa Fe, llevamos la cumbia en la sangre. Decidimos unir ese ritmo con nuestra raíz litoraleña. Manteniendo el respeto total por los instrumentos tradicionales como el acordeón y la guitarra, buscamos una nueva sonoridad.</p>
-                </div>
-            </div>
-
-            <p style="background: var(--gris); padding: 25px; border-radius: 15px; border-left: 5px solid var(--rojo); margin-top: 30px;">
-                Así nace <strong>"Nuestro Gran Amor"</strong>, la canción que define esta nueva etapa y que abre camino al <strong>Nuevo Chamamé</strong>.
-            </p>
         </div>
     </section>
 
@@ -193,19 +230,6 @@
         <div class="grid-videos">
             <div class="video-box">
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/5i27TjA7aAA"></iframe></div>
-                <p>Nuestro primer sencillo es una declaración de amor a la música, a la tierra y a la vida.</p>
-            </div>
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9_6ya7ITR70"></iframe></div>
-                <p>Amor tuerca junto a "EL MÁSTER" Mario Pereyra.</p>
-            </div>
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GoG1xDVIjsY"></iframe></div>
-                <p>Canta Gallito. Colaboración que celebra el legado de Horacio Guarany.</p>
-            </div>
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IAJYQv_rPQ0"></iframe></div>
-                <p>Sesión con Ángel Pereyra. Un testimonio vivo de la tradición chamamecera.</p>
             </div>
         </div>
     </section>
@@ -213,47 +237,7 @@
     <section id="integrantes">
         <h2 class="section-title">La Banda</h2>
         <div class="grid-musicos">
-            <div class="card">
-                <img src="foto3.jpg" alt="Abel Villarreal">
-                <div class="card-info">
-                    <h3>Abel Villarreal</h3>
-                    <span class="instrumento">Acordeón y voz</span>
-                    <p>Hace más de 25 años nació todo con mi viejo Hugo y mi vieja de sostén Ester.</p>
-                </div>
             </div>
-            <div class="card">
-                <img src="foto1.jpg" alt="Walter Villarreal">
-                <div class="card-info">
-                    <h3>Walter Villarreal</h3>
-                    <span class="instrumento">Voz y Guitarra</span>
-                    <p>Mi arranque fue escenario Ernesto Montiel. Con mi guitarra levantamos ese trofeo.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto2.jpg" alt="Román Villarreal">
-                <div class="card-info">
-                    <h3>Román Villarreal</h3>
-                    <span class="instrumento">Voz y Bajo</span>
-                    <p>Tocar delante de Raúl Barboza a los 8 años marcó mi camino.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto4.jpg" alt="Marcos Andreani">
-                <div class="card-info">
-                    <h3>Marcos Yulián Andreani</h3>
-                    <span class="instrumento">Percusión</span>
-                    <p>Mi corazón late al sonar del bombo. Esta innovación del chamamé es un desafío.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto5.jpg" alt="Andrés Cáceres">
-                <div class="card-info">
-                    <h3>Andrés Cáceres</h3>
-                    <span class="instrumento">Percusión</span>
-                    <p>Cada escenario es una oportunidad de compartir la pasión.</p>
-                </div>
-            </div>
-        </div>
     </section>
 
     <div class="social-bar">
@@ -273,7 +257,6 @@
             window.scrollTo(0, 0);
         }
 
-        // Lógica de 40 segundos para los audios
         const audios = document.querySelectorAll('.chamame-audio');
         audios.forEach(audio => {
             audio.ontimeupdate = function() {
