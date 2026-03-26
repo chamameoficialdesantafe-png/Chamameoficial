@@ -24,7 +24,7 @@
             top: 0; 
             z-index: 1000; 
             display: flex; 
-            flex-direction: column; /* Apila logo y links en móvil */
+            flex-direction: column; 
             justify-content: center; 
             align-items: center; 
             padding: 10px 0; 
@@ -47,8 +47,8 @@
             list-style: none; 
             padding: 0;
             margin: 0;
-            flex-wrap: wrap; /* Permite que bajen si no entran */
-            justify-content: center; /* Centra los botones */
+            flex-wrap: wrap; 
+            justify-content: center; 
         }
 
         .nav-links a { 
@@ -63,7 +63,6 @@
         
         .nav-links a:hover { color: var(--rojo); }
 
-        /* Ajuste para pantallas grandes */
         @media (min-width: 768px) {
             nav { flex-direction: row; justify-content: space-between; padding: 0 5%; height: 70px; }
             .logo { margin-bottom: 0; }
@@ -76,9 +75,27 @@
         section.active { display: block; animation: fadeIn 0.6s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* HERO AREA */
-        .hero-container { position: relative; height: 50vh; width: 100%; overflow: hidden; border-radius: 0 0 20px 20px; }
-        .hero-header { height: 100%; width: 100%; background: url('encabezado.jpg') no-repeat center center/cover; transition: transform 0.8s ease; }
+        /* HERO AREA - MODIFICADO PARA CONTRAER IMAGEN EN MÓVIL */
+        .hero-container { 
+            position: relative; 
+            height: 50vh; 
+            width: 100%; 
+            overflow: hidden; 
+            border-radius: 0 0 20px 20px; 
+            background-color: var(--oscuro);
+        }
+        .hero-header { 
+            height: 100%; 
+            width: 100%; 
+            background: url('encabezado.jpg') no-repeat center center/cover; 
+            transition: transform 0.8s ease; 
+        }
+
+        @media (max-width: 768px) {
+            .hero-container { height: 30vh; }
+            .hero-header { background-size: contain; } /* Se contrae para mostrar a todos */
+        }
+
         .hero-container:hover .hero-header { transform: scale(1.1); }
         .hero-info { padding: 40px 20px; text-align: center; }
         .hero-info h1 { font-family: 'MedievalSharp', cursive; font-size: clamp(3rem, 10vw, 5rem); margin: 0; background: linear-gradient(45deg, #ff416c, #ff4b2b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 10px rgba(255, 65, 108, 0.5)); }
