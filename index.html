@@ -1,93 +1,26 @@
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="HtqLtK_p13qlDlMYMOdSMfPWKw-EAVu4xEIUeltlKe4" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Chama.me | Nuevo Chamamé Santafesino (@chamameoficial)</title>
-    <meta name="description" content="Sitio oficial de Chama.me. Descubre la evolución del chamamé santafesino con Abel Villarreal y @chamameoficial. Videos, música y contrataciones.">
-    <meta name="keywords" content="Chama.me, chamameoficial, Abel Villarreal, Chamamé Santafesino, Música Litoral, Santa Fe, Cumbia Santafesina">
-
-    <meta property="og:title" content="Chama.me | El Nuevo Chamamé de Santa Fe">
-    <meta property="og:description" content="Escucha nuestra música y conoce la historia de @chamameoficial. La evolución del género litoraleño.">
-    <meta property="og:image" content="encabezado.jpg">
-    <meta property="og:url" content="https://chamameweb-yohjhqzs.manus.space">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=MedievalSharp&display=swap" rel="stylesheet">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MusicGroup",
-      "name": "Chama.me",
-      "alternateName": "Grupo Chama",
-      "description": "Referentes del Nuevo Chamamé Santafesino. Fusión de música litoraleña con cumbia santafesina liderada por Abel Villarreal.",
-      "url": "https://chamameweb-yohjhqzs.manus.space",
-      "image": "https://chamameweb-yohjhqzs.manus.space/encabezado.jpg",
-      "genre": ["Chamamé", "Cumbia Santafesina", "Música Litoral"],
-      "member": [
-        {
-          "@type": "OrganizationRole",
-          "member": {
-            "@type": "Person",
-            "name": "Abel Villarreal"
-          },
-          "roleName": ["Acordeón", "Voz"]
-        },
-        {
-          "@type": "OrganizationRole",
-          "member": {
-            "@type": "Person",
-            "name": "Walter Villarreal"
-          },
-          "roleName": ["Voz", "Guitarra"]
-        },
-        {
-          "@type": "OrganizationRole",
-          "member": {
-            "@type": "Person",
-            "name": "Román Villarreal"
-          },
-          "roleName": ["Voz", "Bajo"]
-        },
-        {
-          "@type": "OrganizationRole",
-          "member": {
-            "@type": "Person",
-            "name": "Marcos Yulián Andreani"
-          },
-          "roleName": ["Percusión", "Timbal"]
-        },
-        {
-          "@type": "OrganizationRole",
-          "member": {
-            "@type": "Person",
-            "name": "Andrés Cáceres"
-          },
-          "roleName": ["Percusión", "Congas"]
+<style>
+        :root { 
+            --rojo: #e60000; 
+            /* El color oscuro de Spotify suele ser este o #121212 */
+            --oscuro: #121212; 
+            --gris: #181818; 
+            --texto: #ffffff; 
         }
-      ],
-      "sameAs": [
-        "https://facebook.com/chamameoficial",
-        "https://youtube.com/@chamameoficial",
-        "https://instagram.com/chamameoficial",
-        "https://open.spotify.com/intl-es/artist/4dcifyrgMbgBId8ZUylxqM"
-      ]
-    }
-    </script>
-
-    <style>
-        :root { --rojo: #e60000; --oscuro: #0f0f0f; --gris: #1e1e1e; --texto: #ffffff; }
         * { box-sizing: border-box; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--oscuro); color: var(--texto); padding-top: 70px; overflow-x: hidden; }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+            background-color: var(--oscuro); /* Fondo unificado */
+            color: var(--texto); 
+            padding-top: 70px; 
+            overflow-x: hidden; 
+        }
 
         /* NAVEGACIÓN */
         nav { 
-            background: rgba(15, 15, 15, 0.98); 
+            background: rgba(18, 18, 18, 0.95); /* Ajustado al fondo */
             height: auto; 
             min-height: 70px; 
             width: 100%; 
@@ -134,298 +67,33 @@
         .hero-header { height: 100%; width: 100%; background: url('encabezado.jpg') no-repeat center center/cover; transition: transform 0.8s ease; }
         
         @media (max-width: 768px) {
-            .hero-container { height: 30vh; }
-            .hero-header { background-size: contain; }
+            .hero-container { height: 35vh; }
+            .hero-header { background-size: cover; }
         }
 
-        .hero-container:hover .hero-header { transform: scale(1.1); }
+        .hero-container:hover .hero-header { transform: scale(1.05); }
         .hero-info { padding: 40px 20px; text-align: center; }
         .hero-info h1 { font-family: 'MedievalSharp', cursive; font-size: clamp(3rem, 10vw, 5rem); margin: 0; background: linear-gradient(45deg, #ff416c, #ff4b2b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 10px rgba(255, 65, 108, 0.5)); }
 
-        /* REPRODUCTOR */
-        .musica-footer { margin-top: 50px; padding: 30px; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 20px; border: 1px solid rgba(230, 0, 0, 0.3); }
-        .player-item { display: flex; align-items: center; justify-content: space-between; background: var(--gris); margin-bottom: 12px; padding: 12px 25px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.05); }
+        /* REPRODUCTOR ESTILO SPOTIFY */
+        .musica-footer { margin-top: 50px; padding: 30px; background: #181818; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .player-item { display: flex; align-items: center; justify-content: space-between; background: #282828; margin-bottom: 12px; padding: 12px 25px; border-radius: 8px; border: 1px solid transparent; }
+        .player-item:hover { background: #333; }
         .player-info { display: flex; align-items: center; gap: 15px; flex-grow: 1; text-align: left; }
         .player-info i { color: var(--rojo); font-size: 1.2rem; }
         .track-name { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: white; }
         audio { height: 30px; filter: invert(100%) hue-rotate(180deg) brightness(1.5); }
-        .btn-spotify-inline { background: #1DB954; color: white; text-decoration: none; padding: 6px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-left: 15px; }
-        @media (max-width: 768px) { .player-item { flex-direction: column; border-radius: 20px; padding: 15px; } audio { width: 100%; margin: 10px 0; } .btn-spotify-inline { margin-left: 0; width: 100%; justify-content: center; } }
+        .btn-spotify-inline { background: #1DB954; color: white; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-left: 15px; }
+        @media (max-width: 768px) { .player-item { flex-direction: column; border-radius: 12px; padding: 15px; } audio { width: 100%; margin: 10px 0; } .btn-spotify-inline { margin-left: 0; width: 100%; justify-content: center; } }
 
-        /* SOBRE NOSOTROS INICIO */
-        .sobre-nosotros-inicio { max-width: 800px; margin: 40px auto; text-align: center; line-height: 1.8; }
-        .sobre-nosotros-inicio h2 { color: var(--rojo); text-transform: uppercase; margin-bottom: 20px; font-weight: 900; }
-        .sobre-nosotros-inicio p { margin-bottom: 20px; font-size: 1.1rem; color: #ccc; }
-
-        /* HISTORIA */
-        .historia-content { line-height: 1.8; color: #ddd; }
-        .historia-content h3 { color: var(--rojo); font-size: 1.8rem; margin-top: 30px; border-bottom: 1px solid rgba(230, 0, 0, 0.3); padding-bottom: 10px; }
-        .historia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; }
-        .historia-img { width: 100%; border-radius: 15px; border: 2px solid var(--gris); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        @media (max-width: 768px) { .historia-grid { grid-template-columns: 1fr; } }
-        .section-title { font-size: 2rem; border-left: 5px solid var(--rojo); padding-left: 15px; margin-bottom: 30px; text-transform: uppercase; }
-
-        /* VIDEOS */
-        .grid-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .video-box { background: var(--gris); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-bottom: 15px; }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-        /* LA BANDA */
-        .grid-musicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--gris); border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
-        .card img { width: 100%; height: 400px; object-fit: cover; border-bottom: 3px solid var(--rojo); }
-        .card-info { padding: 25px; }
-        .card h3 { color: var(--rojo); margin: 0; font-size: 1.6rem; text-transform: uppercase; }
-        .card .instrumento { font-weight: 700; color: #aaa; display: block; margin-bottom: 15px; font-size: 0.9rem; }
-        .card p { font-size: 0.95rem; line-height: 1.6; text-align: justify; }
-
-        /* REDES SOCIALES FLOTANTES */
-        .social-bar { 
-            position: fixed; 
-            left: 20px; 
-            top: 50%; 
-            transform: translateY(-50%); 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-            z-index: 1000; 
-            padding: 0;
-        }
-        .social-btn { 
-            width: 60px; 
-            height: 60px; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            background: var(--gris); 
-            color: white; 
-            border: 1px solid var(--rojo); 
-            text-decoration: none; 
-            font-size: 1.5rem; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-        .social-btn:hover { transform: scale(1.2); border-color: transparent; color: white; }
-        .fb:hover { background-color: #1877F2; box-shadow: 0 0 15px #1877F2; }
-        .yt:hover { background-color: #FF0000; box-shadow: 0 0 15px #FF0000; }
-        .sp:hover { background-color: #1DB954; box-shadow: 0 0 15px #1DB954; }
+        /* HISTORIA Y TARJETAS */
+        .card { background: #181818; border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
+        .card:hover { background: #282828; border-color: var(--rojo); }
+        .card img { width: 100%; height: 350px; object-fit: cover; border-bottom: 3px solid var(--rojo); }
         
-        /* ESTILO INSTAGRAM */
-        .ig:hover { 
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
-            box-shadow: 0 0 15px #d6249f; 
-        }
+        .video-box { background: #181818; padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
 
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; }
-        .wa-float:hover { transform: scale(1.1); }
-
-        @media (max-width: 768px) {
-            .social-bar { left: 10px; top: auto; bottom: 100px; transform: none; gap: 10px; }
-            .social-btn { width: 50px; height: 50px; font-size: 1.2rem; }
-        }
+        /* REDES SOCIALES */
+        .social-btn { background: #282828; border: 1px solid rgba(255,255,255,0.1); }
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
     </style>
-</head>
-<body>
-
-    <nav>
-        <a onclick="showSection('inicio')" class="logo">Chama.me</a>
-        <ul class="nav-links">
-            <li><a onclick="showSection('inicio')">Inicio</a></li>
-            <li><a onclick="showSection('sobre-nosotros')">Historia</a></li>
-            <li><a onclick="showSection('galeria-videos')">Videos</a></li>
-            <li><a onclick="showSection('integrantes')">La Banda</a></li>
-            <li><a href="https://wa.me/543402529964" target="_blank" style="color: #25d366;">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <section id="inicio" class="active">
-        <div class="hero-container">
-            <div class="hero-header"></div>
-        </div>
-        <div class="hero-info">
-            <h1>Chama.me</h1>
-            <p>La evolución del chamamé desde la provincia de Santa Fe al mundo.</p>
-            
-            <div class="sobre-nosotros-inicio">
-                <h2>Sobre Nosotros</h2>
-                <p>Chama.me es un grupo musical dedicado a revitalizar el chamamé, el género más auténtico del litoral argentino, fusionándolo con elementos contemporáneos que respetan sus raíces profundas.</p>
-                <p>Nuestro viaje comenzó con una pasión compartida por la música tradicional argentina y la necesidad de llevarla a nuevas generaciones sin perder su esencia espiritual y emocional.</p>
-                <p>Cada nota que tocamos es un homenaje a la tierra, a la naturaleza y a los ancestros que nos enseñaron que la música es el lenguaje del alma.</p>
-            </div>
-
-            <div class="musica-footer">
-                <h2 style="font-family: 'MedievalSharp', cursive; color: var(--rojo); margin-bottom: 30px; text-transform: uppercase;">🎵 Escucha nuestra música</h2>
-                
-                <div class="player-item">
-                    <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Amor Tuerca</span></div>
-                    <audio controls class="chamame-audio"><source src="Amor Tuerca .mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/intl-es/track/5SKF6W4thsvOBy80KDxM2t?si=b084423ff3064d68" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                </div>
-
-                <div class="player-item">
-                    <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Nuestro Gran Amor</span></div>
-                    <audio controls class="chamame-audio"><source src="Nuestro Gran Amor.mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/intl-es/track/5fTEElVlJzOeiJCh0dqlqD?si=284f5f1e07354feb" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                </div>
-
-                <div class="player-item">
-                    <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Canta Gallito</span></div>
-                    <audio controls class="chamame-audio"><source src="Canta Gallito.mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/intl-es/track/4ddjySgiqZ1c1eEelJB3vv?si=4fd43bb3bdc347cd" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                </div>
-
-                <div class="player-item">
-                    <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">El Toro</span></div>
-                    <audio controls class="chamame-audio"><source src="El Toro.mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/intl-es/track/7c3QrcOxNkJyiD7VZElfv9?si=e3e8a9d4100c4c6c" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                </div>
-
-                <div class="player-item">
-                    <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Acordeón Tuya Porá</span></div>
-                    <audio controls class="chamame-audio"><source src="Acordeón Tuya Porá .mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/album/0rRqmMlTrjNIRxwCpoTnrd?si=trML2o-0TGGU3NI1XdqkWw " class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                </div>
-
-                <div class="player-item">
-                    <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Aprenderas a llorar</span></div>
-                    <audio controls class="chamame-audio"><source src="Aprenderas a llorar.mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/album/66tHuOzOobppriE3cta4YU?si=t9NjfgF6TPy79eZ14jcxEg" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                </div>
-
-                <p style="margin-top: 15px; font-size: 0.8rem; color: #666;">Muestras de audio para la web. Encuentra los temas completos en nuestras redes.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre-nosotros">
-        <h2 class="section-title">Nuestra Historia</h2>
-        <div class="historia-content">
-            <p style="font-size: 1.4rem; font-weight: 700; color: var(--rojo); text-align: center; margin-bottom: 40px;">De la Raíz a la Nueva Sonoridad</p>
-            
-            <div class="historia-grid">
-                <div>
-                    <h3>El Inicio de un Sueño (Año 2000)</h3>
-                    <p>Todo comenzó en el año 2000, cuando Abel Villarreal y su padre, Hugo, decidieron emprender un camino musical que marcaría sus vidas. Sus primeros pasos los llevaron al emblemático <strong>"Rancho de Ramón Merlo"</strong>, un lugar sagrado para nuestra música donde no solo forjaron amistades, sino que templaron el espíritu chamamecero.</p>
-                    <p>Ese mismo año, el destino los puso a prueba en el Pre-Federal. Con el debut de Walter (hermano de Abel) en el acordeón, lograron ganar su lugar para pisar por primera vez el legendario escenario Ernesto Montiel.</p>
-                </div>
-                <img src="abel en sus comiensos junto a chama.me chamameoficial.jpg" class="historia-img" alt="Inicios de Chama.me">
-            </div>
-
-            <h3>La Consagración y los Grandes Escenarios</h3>
-            <p>Sin rendirse, al año siguiente regresaron con más fuerza y fueron galardonados como <strong>Revelación del Festival Nacional del Chamamé</strong>. Este hito fue la llave que abrió las puertas de los medios de comunicación y los llevó a recorrer los escenarios más prestigiosos del país.</p>
-
-            <div class="historia-grid" style="margin-top: 40px;">
-                <img src="Grupo chama.me.jpg" class="historia-img" alt="Evolución Chama.me">
-                <div>
-                    <h3>El Renacimiento: "CHAMA.ME"</h3>
-                    <p>La pandemia fue un punto de inflexión, un "colapso" que nos obligó a la reflexión profunda. En ese silencio, Abel y el grupo decidieron evolucionar.</p>
-                    <p>Como hijos de la provincia de Santa Fe, llevamos la cumbia en la sangre. Decidimos unir ese ritmo con nuestra raíz litoraleña. Manteniendo el respeto total por los instrumentos tradicionales como el acordeón y la guitarra, buscamos una nueva sonoridad.</p>
-                </div>
-            </div>
-
-            <p style="background: var(--gris); padding: 25px; border-radius: 15px; border-left: 5px solid var(--rojo); margin-top: 30px;">
-                Así nace <strong>"Nuestro Gran Amor"</strong>, la canción que define esta nueva etapa y que abre camino al <strong>Nuevo Chamamé</strong>.
-            </p>
-        </div>
-    </section>
-
-    <section id="galeria-videos">
-        <h2 class="section-title">Videos Oficiales</h2>
-        <div class="grid-videos">
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/5i27TjA7aAA"></iframe></div>
-                <p>Nuestro primer sencillo es una declaración de amor a la música, a la tierra y a la vida.</p>
-            </div>
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9_6ya7ITR70"></iframe></div>
-                <p>Amor tuerca junto a "EL MÁSTER" Mario Pereyra.</p>
-            </div>
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GoG1xDVIjsY"></iframe></div>
-                <p>Canta Gallito. Colaboración que celebra el legado de Horacio Guarany.</p>
-            </div>
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IAJYQv_rPQ0"></iframe></div>
-                <p>Sesión con Ángel Pereyra. Un testimonio vivo de la tradición chamamecera.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="integrantes">
-        <h2 class="section-title">La Banda</h2>
-        <div class="grid-musicos">
-            <div class="card">
-                <img src="foto3.jpg" alt="Abel Villarreal">
-                <div class="card-info">
-                    <h3>Abel Villarreal</h3>
-                    <span class="instrumento">Acordeón y voz</span>
-                    <p>Hace más de 25 años nació todo con mi viejo Hugo y mi vieja de sostén Ester.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto1.jpg" alt="Walter Villarreal">
-                <div class="card-info">
-                    <h3>Walter Villarreal</h3>
-                    <span class="instrumento">Voz y Guitarra</span>
-                    <p>Mi arranque fue escenario Ernesto Montiel. Con mi guitarra levantamos ese trofeo.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto2.jpg" alt="Román Villarreal">
-                <div class="card-info">
-                    <h3>Román Villarreal</h3>
-                    <span class="instrumento">Voz y Bajo</span>
-                    <p>Tocar delante de Raúl Barboza a los 8 años marcó mi camino.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto4.jpg" alt="Marcos Andreani">
-                <div class="card-info">
-                    <h3>Marcos Yulián Andreani</h3>
-                    <span class="instrumento">Percusión</span>
-                    <p>Mi corazón late al sonar del bombo. Esta innovación del chamamé es un desafío.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto5.jpg" alt="Andrés Cáceres">
-                <div class="card-info">
-                    <h3>Andrés Cáceres</h3>
-                    <span class="instrumento">Percusión</span>
-                    <p>Cada escenario es una oportunidad de compartir la pasión.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="social-bar">
-        <a href="https://facebook.com/chamameoficial" class="social-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://youtube.com/@chamameoficial" class="social-btn yt" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://instagram.com/chamameoficial" class="social-btn ig" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://open.spotify.com/intl-es/artist/4dcifyrgMbgBId8ZUylxqM" class="social-btn sp" target="_blank"><i class="fab fa-spotify"></i></a>
-    </div>
-
-    <a href="https://wa.me/543402529964" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(sec => sec.classList.remove('active'));
-            const activeSection = document.getElementById(sectionId);
-            activeSection.classList.add('active');
-            window.scrollTo(0, 0);
-        }
-
-        const audios = document.querySelectorAll('.chamame-audio');
-        audios.forEach(audio => {
-            audio.ontimeupdate = function() {
-                if (audio.currentTime >= 40) {
-                    audio.pause();
-                    audio.currentTime = 0;
-                    alert("¡Sigue escuchando en nuestras plataformas oficiales!");
-                }
-            };
-        });
-    </script>
-</body>
-</html>
