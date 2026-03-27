@@ -118,7 +118,7 @@
         .card .instrumento { font-weight: 700; color: #aaa; display: block; margin-bottom: 15px; font-size: 0.9rem; }
         .card p { font-size: 0.95rem; line-height: 1.6; text-align: justify; }
 
-        /* REDES SOCIALES FLOTANTES (ESTILO WHATSAPP) */
+        /* REDES SOCIALES FLOTANTES */
         .social-bar { 
             position: fixed; 
             left: 20px; 
@@ -145,14 +145,20 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         .social-btn:hover { transform: scale(1.2); border-color: transparent; color: white; }
+        
         .fb:hover { background-color: #1877F2; box-shadow: 0 0 15px #1877F2; }
         .yt:hover { background-color: #FF0000; box-shadow: 0 0 15px #FF0000; }
         .sp:hover { background-color: #1DB954; box-shadow: 0 0 15px #1DB954; }
+        
+        /* ESTILO INSTAGRAM */
+        .ig:hover { 
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
+            box-shadow: 0 0 15px #d6249f; 
+        }
 
         .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; }
         .wa-float:hover { transform: scale(1.1); }
 
-        /* Ajuste para móviles */
         @media (max-width: 768px) {
             .social-bar { left: 10px; top: auto; bottom: 100px; transform: none; gap: 10px; }
             .social-btn { width: 50px; height: 50px; font-size: 1.2rem; }
@@ -193,37 +199,25 @@
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Amor Tuerca</span></div>
                     <audio controls class="chamame-audio"><source src="Amor Tuerca .mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/intl-es/track/5SKF6W4thsvOBy80KDxM2t?si=b084423ff3064d68" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="https://open.spotify.com/intl-es" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Nuestro Gran Amor</span></div>
                     <audio controls class="chamame-audio"><source src="Nuestro Gran Amor.mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/intl-es/track/5fTEElVlJzOeiJCh0dqlqD?si=284f5f1e07354feb" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="https://open.spotify.com/intl-es" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Canta Gallito</span></div>
                     <audio controls class="chamame-audio"><source src="Canta Gallito.mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/intl-es/track/4ddjySgiqZ1c1eEelJB3vv?si=4fd43bb3bdc347cd" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="https://open.spotify.com/intl-es" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <div class="player-item">
                     <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">El Toro</span></div>
                     <audio controls class="chamame-audio"><source src="El Toro.mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/intl-es/track/7c3QrcOxNkJyiD7VZElfv9?si=e3e8a9d4100c4c6c" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                </div>
-
-                <div class="player-item">
-                    <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Acordeón Tuya Porá</span></div>
-                    <audio controls class="chamame-audio"><source src="Acordeón Tuya Porá .mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/album/0rRqmMlTrjNIRxwCpoTnrd?si=trML2o-0TGGU3NI1XdqkWw                                                                                                   " class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                </div>
-
-                <div class="player-item">
-                    <div class="player-info"><i class="fas fa-play-circle"></i><span class="track-name">Aprenderas a llorar</span></div>
-                    <audio controls class="chamame-audio"><source src="Aprenderas a llorar.mp3" type="audio/mpeg"></audio>
-                    <a href="https://open.spotify.com/album/66tHuOzOobppriE3cta4YU?si=t9NjfgF6TPy79eZ14jcxEg" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="https://open.spotify.com/intl-es" class="btn-spotify-inline" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
                 </div>
 
                 <p style="margin-top: 15px; font-size: 0.8rem; color: #666;">Muestras de audio para la web. Encuentra los temas completos en nuestras redes.</p>
@@ -239,27 +233,22 @@
             <div class="historia-grid">
                 <div>
                     <h3>El Inicio de un Sueño (Año 2000)</h3>
-                    <p>Todo comenzó en el año 2000, cuando Abel Villarreal y su padre, Hugo, decidieron emprender un camino musical que marcaría sus vidas. Sus primeros pasos los llevaron al emblemático <strong>"Rancho de Ramón Merlo"</strong>, un lugar sagrado para nuestra música donde no solo forjaron amistades, sino que templaron el espíritu chamamecero.</p>
-                    <p>Ese mismo año, el destino los puso a prueba en el Pre-Federal. Con el debut de Walter (hermano de Abel) en el acordeón, lograron ganar su lugar para pisar por primera vez el legendario escenario Ernesto Montiel.</p>
+                    <p>Todo comenzó en el año 2000, cuando Abel Villarreal y su padre, Hugo, decidieron emprender un camino musical que marcaría sus vidas.</p>
+                    <p>Ese mismo año, el destino los puso a prueba en el Pre-Federal logrando pisar por primera vez el legendario escenario Ernesto Montiel.</p>
                 </div>
                 <img src="abel en sus comiensos junto a chama.me chamameoficial.jpg" class="historia-img" alt="Inicios de Chama.me">
             </div>
 
             <h3>La Consagración y los Grandes Escenarios</h3>
-            <p>Sin rendirse, al año siguiente regresaron con más fuerza y fueron galardonados como <strong>Revelación del Festival Nacional del Chamamé</strong>. Este hito fue la llave que abrió las puertas de los medios de comunicación y los llevó a recorrer los escenarios más prestigiosos del país.</p>
+            <p>Fueron galardonados como <strong>Revelación del Festival Nacional del Chamamé</strong>, hito que les permitió recorrer los escenarios más prestigiosos del país.</p>
 
             <div class="historia-grid" style="margin-top: 40px;">
                 <img src="Grupo chama.me.jpg" class="historia-img" alt="Evolución Chama.me">
                 <div>
                     <h3>El Renacimiento: "CHAMA.ME"</h3>
-                    <p>La pandemia fue un punto de inflexión, un "colapso" que nos obligó a la reflexión profunda. En ese silencio, Abel y el grupo decidieron evolucionar.</p>
-                    <p>Como hijos de la provincia de Santa Fe, llevamos la cumbia en la sangre. Decidimos unir ese ritmo con nuestra raíz litoraleña. Manteniendo el respeto total por los instrumentos tradicionales como el acordeón y la guitarra, buscamos una nueva sonoridad.</p>
+                    <p>Como hijos de la provincia de Santa Fe, llevamos la cumbia en la sangre. Decidimos unir ese ritmo con nuestra raíz litoraleña para crear el <strong>Nuevo Chamamé</strong>.</p>
                 </div>
             </div>
-
-            <p style="background: var(--gris); padding: 25px; border-radius: 15px; border-left: 5px solid var(--rojo); margin-top: 30px;">
-                Así nace <strong>"Nuestro Gran Amor"</strong>, la canción que define esta nueva etapa y que abre camino al <strong>Nuevo Chamamé</strong>.
-            </p>
         </div>
     </section>
 
@@ -268,19 +257,11 @@
         <div class="grid-videos">
             <div class="video-box">
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/5i27TjA7aAA"></iframe></div>
-                <p>Nuestro primer sencillo es una declaración de amor a la música, a la tierra y a la vida.</p>
+                <p>Nuestro primer sencillo es una declaración de amor a la música.</p>
             </div>
             <div class="video-box">
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9_6ya7ITR70"></iframe></div>
                 <p>Amor tuerca junto a "EL MÁSTER" Mario Pereyra.</p>
-            </div>
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GoG1xDVIjsY"></iframe></div>
-                <p>Canta Gallito. Colaboración que celebra el legado de Horacio Guarany.</p>
-            </div>
-            <div class="video-box">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IAJYQv_rPQ0"></iframe></div>
-                <p>Sesión con Ángel Pereyra. Un testimonio vivo de la tradición chamamecera.</p>
             </div>
         </div>
     </section>
@@ -293,23 +274,6 @@
                 <div class="card-info">
                     <h3>Abel Villarreal</h3>
                     <span class="instrumento">Acordeón y voz</span>
-                    <p>Hace más de 25 años nació todo con mi viejo Hugo y mi vieja de sostén Ester.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto1.jpg" alt="Walter Villarreal">
-                <div class="card-info">
-                    <h3>Walter Villarreal</h3>
-                    <span class="instrumento">Voz y Guitarra</span>
-                    <p>Mi arranque fue escenario Ernesto Montiel. Con mi guitarra levantamos ese trofeo.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto2.jpg" alt="Román Villarreal">
-                <div class="card-info">
-                    <h3>Román Villarreal</h3>
-                    <span class="instrumento">Voz y Bajo</span>
-                    <p>Tocar delante de Raúl Barboza a los 8 años marcó mi camino.</p>
                 </div>
             </div>
             <div class="card">
@@ -317,15 +281,6 @@
                 <div class="card-info">
                     <h3>Marcos Yulián Andreani</h3>
                     <span class="instrumento">Percusión</span>
-                    <p>Mi corazón late al sonar del bombo. Esta innovación del chamamé es un desafío.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="foto5.jpg" alt="Andrés Cáceres">
-                <div class="card-info">
-                    <h3>Andrés Cáceres</h3>
-                    <span class="instrumento">Percusión</span>
-                    <p>Cada escenario es una oportunidad de compartir la pasión.</p>
                 </div>
             </div>
         </div>
@@ -334,7 +289,8 @@
     <div class="social-bar">
         <a href="https://facebook.com/chamameoficial" class="social-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://youtube.com/@chamameoficial" class="social-btn yt" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://open.spotify.com" class="social-btn sp" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://instagram.com/chamameoficial" class="social-btn ig" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://open.spotify.com/intl-es" class="social-btn sp" target="_blank"><i class="fab fa-spotify"></i></a>
     </div>
 
     <a href="https://wa.me/543402529964" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
