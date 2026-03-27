@@ -4,26 +4,18 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   
   <url>
-    <loc>https://chamameweb-yohjhqzs.manus.space/</loc>
+    <loc>https://chamameoficialdesantafe-png.github.io/Chamameoficial/</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 
     <image:image>
-      <image:loc>https://chamameweb-yohjhqzs.manus.space/encabezado.jpg</image:loc>
+      <image:loc>https://chamameoficialdesantafe-png.github.io/Chamameoficial/encabezado.jpg</image:loc>
       <image:title>Chama.me - Nuevo Chamamé Santafesino</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://chamameweb-yohjhqzs.manus.space/Grupo%20chama.me.jpg</image:loc>
+      <image:loc>https://chamameoficialdesantafe-png.github.io/Chamameoficial/Grupo%20chama.me.jpg</image:loc>
       <image:title>Grupo Musical Chama.me</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://chamameweb-yohjhqzs.manus.space/foto3.jpg</image:loc>
-      <image:title>Abel Villarreal - Acordeón</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://chamameweb-yohjhqzs.manus.space/foto1.jpg</image:loc>
-      <image:title>Walter Villarreal - Guitarra</image:title>
     </image:image>
 
     <video:video>
@@ -32,20 +24,11 @@
       <video:description>El nuevo sonido del chamamé desde Santa Fe.</video:description>
       <video:player_loc>https://www.youtube.com/embed/5i27TjA7aAA</video:player_loc>
     </video:video>
-
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/9_6ya7ITR70/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Chama.me con Mario Pereyra - Amor Tuerca</video:title>
       <video:description>Colaboración especial de Chama.me y El Máster.</video:description>
       <video:player_loc>https://www.youtube.com/embed/9_6ya7ITR70</video:player_loc>
     </video:video>
-
-    <video:video>
-      <video:thumbnail_loc>https://img.youtube.com/vi/GoG1xDVIjsY/maxresdefault.jpg</video:thumbnail_loc>
-      <video:title>Chama.me - Canta Gallito</video:title>
-      <video:description>Homenaje a Horacio Guarany por Chama.me.</video:description>
-      <video:player_loc>https://www.youtube.com/embed/GoG1xDVIjsY</video:player_loc>
-    </video:video>
-
   </url>
 </urlset>
