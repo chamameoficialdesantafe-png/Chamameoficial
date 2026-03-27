@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Indica a los buscadores dónde encontrar el mapa de tu sitio
-Sitemap: https://chamameweb-yohjhqzs.manus.space/sitemap.xml
+Sitemap: https://chamameoficialdesantafe-png.github.io/Chamameoficial/sitemap.xml
