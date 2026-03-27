@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <url>
+    <loc>https://chamameweb-yohjhqzs.manus.space/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://chamameweb-yohjhqzs.manus.space/encabezado.jpg</image:loc>
+      <image:title>Chama.me - Nuevo Chamamé Santafesino</image:title>
+      <image:caption>Logo y estética oficial de la evolución del chamamé en Santa Fe.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://chamameweb-yohjhqzs.manus.space/abel%20en%20sus%20comiensos%20junto%20a%20chama.me%20chamameoficial.jpg</image:loc>
+      <image:title>Abel Villarreal - Inicios Musicales</image:title>
+      <image:caption>Abel Villarreal en sus comienzos junto a su padre Hugo Villarreal.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://chamameweb-yohjhqzs.manus.space/Grupo%20chama.me.jpg</image:loc>
+      <image:title>Grupo Musical Chama.me</image:title>
+      <image:caption>Integrantes de Chama.me: La nueva sonoridad del litoral.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://chamameweb-yohjhqzs.manus.space/foto3.jpg</image:loc>
+      <image:title>Abel Villarreal - Acordeón y Voz</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://chamameweb-yohjhqzs.manus.space/foto1.jpg</image:loc>
+      <image:title>Walter Villarreal - Voz y Guitarra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://chamameweb-yohjhqzs.manus.space/foto2.jpg</image:loc>
+      <image:title>Román Villarreal - Voz y Bajo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://chamameweb-yohjhqzs.manus.space/foto4.jpg</image:loc>
+      <image:title>Marcos Yulián Andreani - Percusión</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://chamameweb-yohjhqzs.manus.space/foto5.jpg</image:loc>
+      <image:title>Andrés Cáceres - Percusión</image:title>
+    </image:image>
+  </url>
+</urlset>
