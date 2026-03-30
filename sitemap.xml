@@ -5,7 +5,7 @@
   
   <url>
     <loc>https://chamameoficialdesantafe-png.github.io/Chamameoficial/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 
@@ -21,14 +21,19 @@
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/5i27TjA7aAA/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Chama.me - Nuestro Gran Amor</video:title>
-      <video:description>El nuevo sonido del chamamé desde Santa Fe.</video:description>
+      <video:description>El nuevo sonido del chamamé desde Santa Fe. Disfruta de lo mejor de nuestra música regional.</video:description>
       <video:player_loc>https://www.youtube.com/embed/5i27TjA7aAA</video:player_loc>
+      <video:publication_date>2026-01-01T08:00:00-03:00</video:publication_date>
+      <video:live>no</video:live>
     </video:video>
+
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/9_6ya7ITR70/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Chama.me con Mario Pereyra - Amor Tuerca</video:title>
-      <video:description>Colaboración especial de Chama.me y El Máster.</video:description>
+      <video:description>Colaboración especial de Chama.me y El Máster Mario Pereyra. Chamamé Santafesino de primer nivel.</video:description>
       <video:player_loc>https://www.youtube.com/embed/9_6ya7ITR70</video:player_loc>
+      <video:publication_date>2026-02-15T08:00:00-03:00</video:publication_date>
+      <video:live>no</video:live>
     </video:video>
   </url>
 </urlset>
