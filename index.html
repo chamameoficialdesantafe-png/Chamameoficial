@@ -262,6 +262,44 @@
         .card .instrumento { font-weight: 700; color: #aaa; display: block; margin-bottom: 15px; font-size: 0.9rem; }
         .card p { font-size: 0.95rem; line-height: 1.6; text-align: justify; }
 
+        /* --- NUEVOS ESTILOS RESEÑAS --- */
+        .rating-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 1px solid rgba(230, 0, 0, 0.2);
+        }
+        .stars {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            gap: 10px;
+        }
+        .stars input { display: none; }
+        .stars label {
+            font-size: 2.5rem;
+            color: #444;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .stars label:hover,
+        .stars label:hover ~ label,
+        .stars input:checked ~ label {
+            color: #ffcc00;
+        }
+        .form-resena textarea {
+            width: 100%;
+            background: #111;
+            border: 1px solid #333;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-family: inherit;
+        }
+        /* ------------------------------- */
+
         /* REDES SOCIALES FLOTANTES */
         .social-bar { 
             position: fixed; 
@@ -495,11 +533,25 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             
             <div class="video-box" style="text-align: center; border: 1px solid var(--rojo); background: linear-gradient(145deg, #1a1a1a, #0f0f0f);">
-                <h3 style="color: var(--rojo); font-family: 'MedievalSharp', cursive; margin-bottom: 10px;">Calificación General</h3>
-                <div style="font-size: 2.5rem; color: #ffcc00; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
-                <p style="font-size: 1.1rem; color: #ccc;">"La evolución del chamamé calificada por nuestro público."</p>
-                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
-                <p style="font-size: 0.9rem; color: #888;">Dejanos tu comentario directamente en nuestro muro oficial de Facebook.</p>
+                <h3 style="color: var(--rojo); font-family: 'MedievalSharp', cursive; margin-bottom: 10px;">¡Danos tu Opinión!</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">Calificá nuestra propuesta musical</p>
+                
+                <form class="form-resena" onsubmit="alert('¡Gracias por tu reseña!'); return false;">
+                    <div class="rating-container">
+                        <div class="stars">
+                            <input type="radio" name="star" id="star5"><label for="star5">★</label>
+                            <input type="radio" name="star" id="star4"><label for="star4">★</label>
+                            <input type="radio" name="star" id="star3"><label for="star3">★</label>
+                            <input type="radio" name="star" id="star2"><label for="star2">★</label>
+                            <input type="radio" name="star" id="star1"><label for="star1">★</label>
+                        </div>
+                    </div>
+                    <textarea rows="4" placeholder="Escribí tu mensaje aquí..."></textarea>
+                    <button type="submit" class="boton-descarga" style="width: 100%; background-color: var(--rojo);">ENVIAR RESEÑA</button>
+                </form>
+
+                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 30px 0;">
+                <p style="font-size: 0.8rem; color: #888;">También puedes comentarnos en Facebook</p>
                 <a href="https://facebook.com/chamameoficial" target="_blank" class="boton-descarga" style="padding: 10px 20px; font-size: 0.8rem; background-color: #1877F2;">PÁGINA DE FACEBOOK</a>
             </div>
 
